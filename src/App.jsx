@@ -17,7 +17,7 @@ const mockData = [
   },
   {
     id: 2,
-    createdDate: new Date("2025-07-17").getTime(),
+    createdDate: new Date("2025-08-17").getTime(),
     emotionId: 2,
     content: "2번일기내용"
   },

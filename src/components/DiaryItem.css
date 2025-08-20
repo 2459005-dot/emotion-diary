@@ -14,10 +14,13 @@
     align-items: center;
     border-radius: 5px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .img-section img {
-    width: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 .img-section.bg-1 {
@@ -38,6 +41,14 @@
 
 .img-section.bg-5 {
     background-color: rgb(253, 86, 95);
+}
+
+.img-section.bg-7 {
+    background-color: rgb(131, 222, 255);
+}
+
+.img-section.bg-8 {
+    background-color: rgb(189, 156, 222);
 }
 
 .info-section {
