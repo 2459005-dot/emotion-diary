@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Edit from './pages/Edit'
 import { Route, Routes } from 'react-router-dom'
 import Button from './components/Button'
-import { useReducer, useRef, createContext, useEffect } from 'react'
+import { useReducer, useRef, createContext, useEffect, useState } from 'react'
 
 const mockData = [
   {
@@ -27,7 +27,6 @@ const mockData = [
     emotionId: 3,
     content: "3번일기내용"
   }
-
 ]
 
 function reducer(state, action) {
@@ -61,6 +60,8 @@ function App() {
 
   const [data, dispatch] = useReducer(reducer, mockData)
   const idRef = useRef(4)
+
+  const [mode, setMode] = useState('light')
 
   useEffect(() => {
     dispatch({
@@ -101,18 +102,24 @@ function App() {
   }
 
   return (
-    <div>
-      <DiaryStateContext.Provider value={data}>
-        <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/new' element={<New />} />
-            <Route path='/edit/:id' element={<Edit />} />
-            <Route path='/diary/:id' element={<Diary />} />
-            <Route path='*' element={<Notfound />} />
-          </Routes>
-        </DiaryDispatchContext.Provider>
-      </DiaryStateContext.Provider>
+    <div className={`Container ${mode}`}>
+      <div className="content-wrap">
+        <DiaryStateContext.Provider value={data}>
+          <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
+            <select value={mode} onChange={(e) => setMode(e.target.value)}>
+              <option value="light">light</option>
+              <option value="dark">dark</option>
+            </select>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/new' element={<New />} />
+              <Route path='/edit/:id' element={<Edit />} />
+              <Route path='/diary/:id' element={<Diary />} />
+              <Route path='*' element={<Notfound />} />
+            </Routes>
+          </DiaryDispatchContext.Provider>
+        </DiaryStateContext.Provider>
+      </div>
     </div>
   )
 }
