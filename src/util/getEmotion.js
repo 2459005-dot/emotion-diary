@@ -3,8 +3,9 @@ import emotion2 from './../assets/emotion2.png'
 import emotion3 from './../assets/emotion3.png'
 import emotion4 from './../assets/emotion4.png'
 import emotion5 from './../assets/emotion5.png'
+import emotion6 from './../assets/emotion6.png'
 import emotion7 from './../assets/emotion7.png'
-import emotion8 from './../assets/emotion8.png'
+
 
 export function getEmotion(emotionId){
     switch(emotionId){
@@ -13,8 +14,8 @@ export function getEmotion(emotionId){
         case 3: return emotion3;
         case 4: return emotion4;
         case 5: return emotion5;
+        case 6: return emotion6;
         case 7: return emotion7;
-        case 8: return emotion8;
         default:return null
     }
 }

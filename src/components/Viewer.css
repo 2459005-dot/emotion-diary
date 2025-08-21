@@ -1,0 +1,65 @@
+.Viewer>section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.Viewer>section h4 {
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.emotion-img-wrapper {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.content-section{
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.content-section p{
+    min-height: 100px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.emotion-img-wrapper.img-1 {
+    background-color: rgb(100, 201, 100);
+}
+
+.emotion-img-wrapper.img-2 {
+    background-color: rgb(157, 215, 114);
+}
+
+.emotion-img-wrapper.img-3 {
+    background-color: rgb(253, 206, 23);
+}
+
+.emotion-img-wrapper.img-4 {
+    background-color: rgb(253, 132, 70);
+}
+
+.emotion-img-wrapper.img-5 {
+    background-color: rgb(253, 86, 95);
+}
+
+.emotion-img-wrapper.img-7 {
+    background-color: rgb(131, 222, 255);
+}
+
+.emotion-img-wrapper.img-8 {
+    background-color: rgb(189, 156, 222);
+}
